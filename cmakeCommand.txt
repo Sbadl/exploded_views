@@ -1,0 +1,7 @@
+cmake -DSAMSON_SDK_PATH=”C:\Program Files\NANO-D\SDK/0.7.0/” -G”Visual Studio 14 Win64" -DQT5_CMAKE_INCLUDE_DIR=”C:\Qt\Qt5.10.1\5.10.1\msvc2015_64\lib\cmake” ..
+
+
+TODO: SET $TargetDir!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+C:\Program Files\NANO-D\SAMSON\0.7.0\Binaries\SAMSON-Core.exe
+C:\Program Files\NANO-D\SDK\0.7.0\SAMSON-Debug\Binaries\SAMSON-Core.exe

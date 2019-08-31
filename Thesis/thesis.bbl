@@ -1,0 +1,140 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{APH{\etalchar{+}}03}
+
+\bibitem[APH{\etalchar{+}}03]{agrawala2003designing}
+Maneesh Agrawala, Doantam Phan, Julie Heiser, John Haymaker, Jeff Klingner, Pat
+  Hanrahan, and Barbara Tversky.
+\newblock Designing effective step-by-step assembly instructions.
+\newblock In {\em ACM Transactions on Graphics (TOG)}, volume~22, pages
+  828--837. ACM, 2003.
+
+\bibitem[BF08]{burns2008adaptive}
+Michael Burns and Adam Finkelstein.
+\newblock Adaptive cutaways for comprehensible rendering of polygonal scenes.
+\newblock In {\em ACM SIGGRAPH Asia 2008 Papers}, SIGGRAPH Asia '08, pages
+  154:1--154:7, New York, NY, USA, 2008. ACM.
+
+\bibitem[BG06]{bruckner2006exploded}
+Stefan Bruckner and M~Eduard Gröller.
+\newblock Exploded views for volume data.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  12(5):1077--1084, 2006.
+
+\bibitem[BH04]{bane2004interactive}
+Ryan Bane and Tobias Hollerer.
+\newblock Interactive tools for virtual x-ray vision in mobile augmented
+  reality.
+\newblock In {\em Proceedings of the 3rd IEEE/ACM International Symposium on
+  Mixed and Augmented Reality}, pages 231--239. IEEE Computer Society, 2004.
+
+\bibitem[BL98]{bares1998intelligent}
+William~H Bares and James~C Lester.
+\newblock Intelligent multi-shot visualization interfaces for dynamic 3d
+  worlds.
+\newblock In {\em Proceedings of the 4th international conference on
+  Intelligent user interfaces}, pages 119--126. ACM, 1998.
+
+\bibitem[DFW87]{de1987simplified}
+Thomas De~Fazio and Daniel Whitney.
+\newblock Simplified generation of all mechanical assembly sequences.
+\newblock {\em IEEE Journal on Robotics and Automation}, 3(6):640--658, 1987.
+
+\bibitem[EAT07]{elmqvist2007employing}
+Niklas Elmqvist, Ulf Assarsson, and Philippas Tsigas.
+\newblock Employing dynamic transparency for 3d occlusion management: Design
+  issues and evaluation.
+\newblock In {\em IFIP Conference on Human-Computer Interaction}, pages
+  532--545. Springer, 2007.
+
+\bibitem[Elm05]{elmqvist2005balloonprobe}
+Niklas Elmqvist.
+\newblock Balloonprobe: Reducing occlusion in 3d using interactive space
+  distortion.
+\newblock In {\em Proceedings of the ACM symposium on Virtual reality software
+  and technology}, pages 134--137. ACM, 2005.
+
+\bibitem[ET08]{elmqvist2008taxonomy}
+Niklas Elmqvist and Philippas Tsigas.
+\newblock A taxonomy of 3d occlusion management for visualization.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  14(5):1095--1109, 2008.
+
+\bibitem[Jol11]{jolliffe2011principal}
+Ian Jolliffe.
+\newblock Principal component analysis.
+\newblock In {\em International encyclopedia of statistical science}, pages
+  1094--1096. Springer, 2011.
+
+\bibitem[KLW89]{kroll1989rule}
+Ehud Kroll, Ehud Lenz, and John~R Wolberg.
+\newblock Rule-based generation of exploded-views and assembly sequences.
+\newblock {\em AI EDAM}, 3(3):143--155, 1989.
+
+\bibitem[LACS08]{li2008automated}
+Wilmot Li, Maneesh Agrawala, Brian Curless, and David Salesin.
+\newblock Automated generation of interactive 3d exploded view diagrams.
+\newblock In {\em ACM Transactions on Graphics (TOG)}, volume~27, page 101.
+  ACM, 2008.
+
+\bibitem[MK93]{mohammad1993automatic}
+Riaz Mohammad and Ehud Kroll.
+\newblock Automatic generation of exploded view by graph transformation.
+\newblock In {\em Artificial Intelligence for Applications, 1993. Proceedings.,
+  Ninth Conference on}, pages 368--374. IEEE, 1993.
+
+\bibitem[MTB03]{mcguffin2003using}
+Michael~J McGuffin, Liviu Tancau, and Ravin Balakrishnan.
+\newblock Using deformations for browsing volumetric data.
+\newblock In {\em Visualization, 2003. VIS 2003. IEEE}, pages 401--408. IEEE,
+  2003.
+
+\bibitem[Rot06]{rothemund2006folding}
+Paul~WK Rothemund.
+\newblock Folding dna to create nanoscale shapes and patterns.
+\newblock {\em Nature}, 440(7082):297, 2006.
+
+\bibitem[SCS04]{sonnet2004integrating}
+Henry Sonnet, Sheelagh Carpendale, and Thomas Strothotte.
+\newblock Integrating expanding annotations with a 3d explosion probe.
+\newblock In {\em Proceedings of the working conference on Advanced visual
+  interfaces}, pages 63--70. ACM, 2004.
+
+\bibitem[See07]{seeman2007overview}
+Nadrian~C Seeman.
+\newblock An overview of structural dna nanotechnology.
+\newblock {\em Molecular biotechnology}, 37(3):246, 2007.
+
+\bibitem[SK83]{seeman1983design}
+Nadrian~C Seeman and Neville~R Kallenbach.
+\newblock Design of immobile nucleic acid junctions.
+\newblock {\em Biophysical journal}, 44(2):201, 1983.
+
+\bibitem[SNL14]{simmel2014wireframe}
+Stephanie~S Simmel, Philipp~C Nickels, and Tim Liedl.
+\newblock Wireframe and tensegrity dna nanostructures.
+\newblock {\em Accounts of chemical research}, 47(6):1691--1699, 2014.
+
+\bibitem[TKS10]{tatzgern2010compact}
+Markus Tatzgern, Denis Kalkofen, and Dieter Schmalstieg.
+\newblock Compact explosion diagrams.
+\newblock In {\em Proceedings of the 8th International Symposium on
+  Non-Photorealistic Animation and Rendering}, pages 17--26. ACM, 2010.
+
+\bibitem[WC{\etalchar{+}}53]{watson1953molecular}
+James~D Watson, Francis~HC Crick, et~al.
+\newblock Molecular structure of nucleic acids.
+\newblock {\em Nature}, 171(4356):737--738, 1953.
+
+\bibitem[Win96]{winfree1996computational}
+Erik Winfree.
+\newblock On the computational power of dna annealing and ligation.
+\newblock 1996.
+
+\bibitem[ZNLY14]{zhang2014structural}
+Fei Zhang, Jeanette Nangreave, Yan Liu, and Hao Yan.
+\newblock Structural dna nanotechnology: state of the art and future
+  perspective.
+\newblock {\em Journal of the American Chemical Society}, 136(32):11198--11211,
+  2014.
+
+\end{thebibliography}

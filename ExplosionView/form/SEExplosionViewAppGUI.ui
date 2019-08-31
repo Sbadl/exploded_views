@@ -1,0 +1,1741 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SEExplosionViewAppGUIClass</class>
+ <widget class="QWidget" name="SEExplosionViewAppGUIClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>560</width>
+    <height>510</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>300</width>
+    <height>100</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string/>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="tabShape">
+      <enum>QTabWidget::Rounded</enum>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <property name="documentMode">
+      <bool>false</bool>
+     </property>
+     <widget class="QWidget" name="tab_GuidedExplosion">
+      <attribute name="title">
+       <string>Structure-Defined Explosion</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QLabel" name="label_ExplosionDirection">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Explosion Direction</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioButton_sphericalExplosion">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Spherical Explosion</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QRadioButton" name="radioButton_pcaExplosion">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>PC Explosion</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_PCA_Component">
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Component:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="spinBox_PCA">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>3</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_Hierarchie">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetDefaultConstraint</enum>
+         </property>
+         <item>
+          <widget class="QLabel" name="label_Hierarchie">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Hierarchie</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Parent has to be one layer above child. Will be set automatically!</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_Parent">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Parent</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox_Parent">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>20</height>
+            </size>
+           </property>
+           <item>
+            <property name="text">
+             <string>Document</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Model</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Molecule</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Chain</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Residue</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Backbone/Sidechain</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_Child">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Child</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox_Child">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>20</height>
+            </size>
+           </property>
+           <item>
+            <property name="text">
+             <string>Model</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Molecule</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Chain</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Residue</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Backbone/Sidechain</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Atom</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_GuidedExplosion">
+         <item>
+          <widget class="QLabel" name="label_explosionOrder">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Explosion Order</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_Peeling">
+           <item>
+            <widget class="QComboBox" name="comboBox_ExplosionOrder">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>20</height>
+              </size>
+             </property>
+             <item>
+              <property name="text">
+               <string>Parallel</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Sequential</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Peeling</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_PeelingIntervals">
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Peeling Intervals:</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="spinBox_Peeling">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>10</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_GuidedExplosion">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Explode</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_explode">
+           <item>
+            <widget class="QCheckBox" name="checkBox_explodeNearestChild">
+             <property name="text">
+              <string>Explode Nearst Child</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="checkBox_usePosCoeff">
+             <property name="text">
+              <string>Use Position Parameter</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="checkBox_displayArrowsGuided">
+             <property name="text">
+              <string>Display Arrows</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QSlider" name="sliderExplosionRange">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximum">
+            <number>99</number>
+           </property>
+           <property name="singleStep">
+            <number>1</number>
+           </property>
+           <property name="pageStep">
+            <number>100</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::NoTicks</enum>
+           </property>
+           <property name="tickInterval">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_MinusPlus">
+           <item>
+            <widget class="QPushButton" name="Button_Minus">
+             <property name="maximumSize">
+              <size>
+               <width>30</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>-</string>
+             </property>
+             <property name="shortcut">
+              <string>-</string>
+             </property>
+             <property name="autoRepeat">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="Button_Plus">
+             <property name="maximumSize">
+              <size>
+               <width>30</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>+</string>
+             </property>
+             <property name="shortcut">
+              <string>+</string>
+             </property>
+             <property name="checkable">
+              <bool>false</bool>
+             </property>
+             <property name="autoRepeat">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_ExplosionForce">
+         <item>
+          <widget class="QLabel" name="label_ExplosionForce">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Explosion Force</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSlider" name="sliderExplosionForce">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>10</number>
+           </property>
+           <property name="pageStep">
+            <number>1</number>
+           </property>
+           <property name="sliderPosition">
+            <number>5</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::TicksBelow</enum>
+           </property>
+           <property name="tickInterval">
+            <number>1</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayoutForceLabels">
+           <item>
+            <widget class="QLabel" name="label_0">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_5">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>5</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_10">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="text">
+              <string>10</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_Reset">
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Reset</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_pathExplosion">
+      <attribute name="title">
+       <string>Path Explosion</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_explosionDirections">
+         <item>
+          <widget class="QLabel" name="label_SetExplosionDirections">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Set Explosion Groups and Paths</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_explosionGroups">
+           <item>
+            <widget class="QPushButton" name="pushButton_addExplosionGroup">
+             <property name="maximumSize">
+              <size>
+               <width>170</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Add Explosion (G)roup</string>
+             </property>
+             <property name="shortcut">
+              <string>G</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_deleteExplosionGroup">
+             <property name="maximumSize">
+              <size>
+               <width>170</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Delete Explosion Group</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox_explosionGroups">
+           <property name="maximumSize">
+            <size>
+             <width>170</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_explosionGroups_2">
+           <item>
+            <widget class="QCheckBox" name="checkBox_showCurrentGroup">
+             <property name="text">
+              <string>Show Current Group</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="checkBox_displayArrows">
+             <property name="text">
+              <string>Display Arrows</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_ExplosionPaths">
+           <item>
+            <widget class="QTableWidget" name="tableWidget_explosionPaths">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>500</width>
+               <height>200</height>
+              </size>
+             </property>
+             <property name="editTriggers">
+              <set>QAbstractItemView::NoEditTriggers</set>
+             </property>
+             <property name="tabKeyNavigation">
+              <bool>true</bool>
+             </property>
+             <property name="rowCount">
+              <number>5</number>
+             </property>
+             <property name="columnCount">
+              <number>3</number>
+             </property>
+             <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="verticalHeaderVisible">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="verticalHeaderCascadingSectionResizes">
+              <bool>false</bool>
+             </attribute>
+             <row/>
+             <row/>
+             <row/>
+             <row/>
+             <row/>
+             <column>
+              <property name="text">
+               <string>ID</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Start</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>End</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_ExplosionPathButtons">
+             <item>
+              <widget class="QPushButton" name="pushButton_addExplosionPath">
+               <property name="maximumSize">
+                <size>
+                 <width>170</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>(A)dd Explosion Path</string>
+               </property>
+               <property name="shortcut">
+                <string>A</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_deleteExplosionPath">
+               <property name="maximumSize">
+                <size>
+                 <width>170</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>(D)elete Last Explosion Path</string>
+               </property>
+               <property name="shortcut">
+                <string>D</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_cancel">
+               <property name="maximumSize">
+                <size>
+                 <width>170</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>(C)ancel Add Path</string>
+               </property>
+               <property name="shortcut">
+                <string>C</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_Explode">
+         <item>
+          <widget class="QLabel" name="label_explode">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Explode</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSlider" name="horizontalSlider_pathExplosion">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="pageStep">
+            <number>100</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_minusplus2">
+           <item>
+            <widget class="QPushButton" name="pushButton_Minus2">
+             <property name="maximumSize">
+              <size>
+               <width>30</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>-</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_Plus2">
+             <property name="maximumSize">
+              <size>
+               <width>30</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>+</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_Reset2">
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Reset</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_settings">
+      <attribute name="title">
+       <string>Settings</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_explosionOrder">
+         <item>
+          <widget class="QLabel" name="label_Ease">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Ease Function</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox_Ease">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>20</height>
+            </size>
+           </property>
+           <item>
+            <property name="text">
+             <string>Linear</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Cubic Ease In</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Cubic Ease Out</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Cubic Ease In Out</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_explosionTimer">
+         <item>
+          <widget class="QLabel" name="label_explosionTimer">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Explosion Timer</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_PageStepLength">
+           <item>
+            <widget class="QLabel" name="label_PageStepLength">
+             <property name="maximumSize">
+              <size>
+               <width>110</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Page Step Length:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="spinBox_PageStepLength">
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="minimum">
+              <number>10</number>
+             </property>
+             <property name="maximum">
+              <number>1000</number>
+             </property>
+             <property name="singleStep">
+              <number>10</number>
+             </property>
+             <property name="value">
+              <number>100</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_TimerInterval">
+           <item>
+            <widget class="QLabel" name="label_TimerInterval">
+             <property name="maximumSize">
+              <size>
+               <width>110</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+              </font>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="text">
+              <string>Timer Interval(ms):</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="spinBox_TimerInterval">
+             <property name="maximumSize">
+              <size>
+               <width>50</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="minimum">
+              <number>10</number>
+             </property>
+             <property name="maximum">
+              <number>300</number>
+             </property>
+             <property name="singleStep">
+              <number>10</number>
+             </property>
+             <property name="value">
+              <number>10</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_rotateCamera">
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Rotate Camera</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>sliderExplosionRange</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>setGuidedExplosionValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>152</x>
+     <y>350</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>88</x>
+     <y>100</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sliderExplosionForce</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>setGuidedExplosionForce(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>156</x>
+     <y>432</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>301</x>
+     <y>282</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_Parent</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>setGuidedExplosionParent(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>144</x>
+     <y>196</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>301</x>
+     <y>8</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_Child</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>setGuidedExplosionChild(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>144</x>
+     <y>242</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>301</x>
+     <y>7</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_Reset</sender>
+   <signal>clicked()</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>onReset()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>69</x>
+     <y>487</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>84</x>
+     <y>282</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Button_Plus</sender>
+   <signal>clicked()</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>playGuidedForward()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>535</x>
+     <y>377</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>520</x>
+     <y>284</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Button_Minus</sender>
+   <signal>clicked()</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>playGuidedBackward()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>51</x>
+     <y>377</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>5</x>
+     <y>293</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_addExplosionPath</sender>
+   <signal>clicked()</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>addExplosionPathStart()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>502</x>
+     <y>207</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>520</x>
+     <y>231</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_deleteExplosionPath</sender>
+   <signal>clicked()</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>deleteLastExplosionPath()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>502</x>
+     <y>274</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>523</x>
+     <y>338</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_deleteExplosionGroup</sender>
+   <signal>clicked()</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>deletePathExplosionGroup()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>420</x>
+     <y>86</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>553</x>
+     <y>97</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_addExplosionGroup</sender>
+   <signal>clicked()</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>addPathExplosionGroup()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>64</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>2</x>
+     <y>76</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_pathExplosion</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>setPathExplosionValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>131</x>
+     <y>432</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>514</x>
+     <y>447</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_Reset2</sender>
+   <signal>clicked()</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>onReset()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>69</x>
+     <y>487</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>5</x>
+     <y>447</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_cancel</sender>
+   <signal>clicked()</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>cancelAddExplosionPath()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>502</x>
+     <y>341</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>517</x>
+     <y>387</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_Ease</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>setEase(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>131</x>
+     <y>192</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>555</x>
+     <y>57</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_ExplosionOrder</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>setGuidedExplosionOrder(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>162</x>
+     <y>290</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>7</x>
+     <y>170</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_Peeling</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>setNumberOfPeelingGroups(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>535</x>
+     <y>290</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>554</x>
+     <y>169</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_PageStepLength</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>setSlidersPageStepLength(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>180</x>
+     <y>333</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>553</x>
+     <y>338</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_TimerInterval</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>setTimerInterval(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>175</x>
+     <y>426</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>557</x>
+     <y>417</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_Plus2</sender>
+   <signal>clicked()</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>playPathForward()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>535</x>
+     <y>459</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>551</x>
+     <y>407</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_Minus2</sender>
+   <signal>clicked()</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>playPathBackward()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>51</x>
+     <y>459</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>0</x>
+     <y>397</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_showCurrentGroup</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>showCurrentExplosionGroup(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>83</x>
+     <y>137</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>6</x>
+     <y>151</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_displayArrows</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>displayPathArrows(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>392</x>
+     <y>137</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>553</x>
+     <y>136</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_explosionGroups</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>setPathExplosionGroup(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>111</x>
+     <y>113</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>3</x>
+     <y>112</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_rotateCamera</sender>
+   <signal>clicked()</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>rotateCamera()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>112</x>
+     <y>487</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>197</x>
+     <y>516</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_sphericalExplosion</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>setSphericalExplosion(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>326</x>
+     <y>79</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>83</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_pcaExplosion</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>setPCAExplosion(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>112</x>
+     <y>106</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>554</x>
+     <y>126</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_PCA</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>setPCAComponent(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>535</x>
+     <y>106</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>553</x>
+     <y>219</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_displayArrowsGuided</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>displayGuidedArrows(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>409</x>
+     <y>337</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>5</x>
+     <y>351</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_explodeNearestChild</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>setExplodeNearestChild(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>44</x>
+     <y>327</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>3</x>
+     <y>326</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_usePosCoeff</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>SEExplosionViewAppGUIClass</receiver>
+   <slot>setUsePosCoeff(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>235</x>
+     <y>331</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>224</x>
+     <y>508</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>setGuidedExplosionValue(int)</slot>
+  <slot>setGuidedExplosionForce(int)</slot>
+  <slot>setGuidedExplosionParent(int)</slot>
+  <slot>setGuidedExplosionChild(int)</slot>
+  <slot>onReset()</slot>
+  <slot>setEase(int)</slot>
+  <slot>setSequential(bool)</slot>
+  <slot>playGuidedForward()</slot>
+  <slot>playGuidedBackward()</slot>
+  <slot>setTimerInterval(int)</slot>
+  <slot>setSlidersPageStepLength(int)</slot>
+  <slot>setGuidedExplosionOrder(int)</slot>
+  <slot>setNumberOfPeelingGroups(int)</slot>
+  <slot>addExplosionPath()</slot>
+  <slot>deleteLastExplosionPath()</slot>
+  <slot>deletePathExplosionGroup()</slot>
+  <slot>addPathExplosionGroup()</slot>
+  <slot>showCurrentExplosionGroup(bool)</slot>
+  <slot>setPathExplosionGroup(QString)</slot>
+  <slot>setPathExplosionValue(int)</slot>
+  <slot>cancelAddExplosionPath()</slot>
+  <slot>playPathForward()</slot>
+  <slot>playPathBackward()</slot>
+  <slot>displayPathArrows(bool)</slot>
+  <slot>rotateCamera()</slot>
+  <slot>setSphericalExplosion(bool)</slot>
+  <slot>setPCAExplosion(bool)</slot>
+  <slot>setPCAComponent(int)</slot>
+  <slot>displayGuidedArrows(bool)</slot>
+  <slot>setExplodeNearestChild(bool)</slot>
+  <slot>setUsePosCoeff(bool)</slot>
+ </slots>
+</ui>
